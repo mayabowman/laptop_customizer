@@ -30,7 +30,7 @@ class FieldOptions extends Component {
               className="feature__option"
               name={slugify(item.name)}
               checked={item.name === this.props.selected[this.props.feature].name}
-              onChange={() => this.props.updateFeature(this.props.selected, item)}
+              onChange={e => this.props.updateFeature(this.props.selected, item)}
             />
             <label htmlFor={itemHash} className="feature__label">
               {item.name} ({USCurrencyFormat.format(item.cost)})

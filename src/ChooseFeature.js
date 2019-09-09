@@ -17,7 +17,7 @@ class ChooseFeature extends Component {
               feature={feature}  
               features={this.props.features} 
               selected={this.props.selected} 
-              onChange={this.updateFeature} 
+              onChange={this.props.updateFeature.bind(this)} 
             />
           </fieldset>
         )

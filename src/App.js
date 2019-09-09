@@ -51,7 +51,7 @@ class App extends Component {
           <Options 
             features={this.props.features} 
             selected={this.state.selected}
-            onChange={this.updateFeature}  
+            onChange={this.updateFeature.bind(this)}  
           />
         </form>
         <h2>Your cart</h2>
