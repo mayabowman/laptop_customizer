@@ -31,6 +31,14 @@ class App extends Component {
       }
     }
   };
+
+  updateFeature = (feature, newValue) => {
+    const selected = Object.assign({}, this.props.selected);
+    selected[feature] = newValue;
+    this.setState({
+      selected
+    });
+  };
   
   render() {
     return (
@@ -40,7 +48,11 @@ class App extends Component {
         </header>
         <form className="main__form">
           <h2>Customize your laptop</h2>
-          <Options features={this.props.features} selected={this.state.selected} />
+          <Options 
+            features={this.props.features} 
+            selected={this.state.selected}
+            onChange={this.updateFeature(this.props.selected, item)}  
+          />
         </form>
         <h2>Your cart</h2>
           <Cart features={this.props.features} selected={this.state.selected} />
