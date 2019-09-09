@@ -33,7 +33,7 @@ class App extends Component {
   };
 
   updateFeature = (feature, newValue) => {
-    const selected = Object.assign({}, this.props.selected);
+    const selected = Object.assign({}, this.state.selected);
     selected[feature] = newValue;
     this.setState({
       selected
@@ -51,7 +51,7 @@ class App extends Component {
           <Options 
             features={this.props.features} 
             selected={this.state.selected}
-            onChange={this.updateFeature(this.props.selected, item)}  
+            onChange={this.updateFeature}  
           />
         </form>
         <h2>Your cart</h2>

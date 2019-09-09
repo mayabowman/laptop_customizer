@@ -5,7 +5,11 @@ class Options extends Component {
   render() {
     return (
       <div>
-        <ChooseFeature features={this.props.features} selected={this.props.selected} />
+        <ChooseFeature 
+          features={this.props.features} 
+          selected={this.props.selected} 
+          onChange={this.updateFeature}   
+        />
       </div>
     )
   }

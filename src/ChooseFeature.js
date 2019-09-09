@@ -13,7 +13,12 @@ class ChooseFeature extends Component {
             <legend className="feature__name">
               <h3>{feature}</h3>
             </legend>
-            <FieldOptions feature={feature} features={this.props.features} selected={this.props.selected} />
+            <FieldOptions 
+              feature={feature}  
+              features={this.props.features} 
+              selected={this.props.selected} 
+              onChange={this.updateFeature} 
+            />
           </fieldset>
         )
       })

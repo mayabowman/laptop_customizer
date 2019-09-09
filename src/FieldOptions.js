@@ -8,13 +8,13 @@ const USCurrencyFormat = new Intl.NumberFormat('en-US', {
 
 class FieldOptions extends Component {
 
-  updateFeature = (feature, newValue) => {
-    const selected = Object.assign({}, this.props.selected);
-    selected[feature] = newValue;
-    this.setState({
-      selected
-    });
-  };
+  // updateFeature = (feature, newValue) => {
+  //   const selected = Object.assign({}, this.props.selected);
+  //   selected[feature] = newValue;
+  //   this.setState({
+  //     selected
+  //   });
+  // };
   
   render() {
     console.log(this.props.features)
@@ -30,7 +30,7 @@ class FieldOptions extends Component {
               className="feature__option"
               name={slugify(item.name)}
               checked={item.name === this.props.selected[this.props.feature].name}
-              onChange={e => this.updateFeature(this.props.selected, item)}
+              onChange={() => this.props.updateFeature(this.props.selected, item)}
             />
             <label htmlFor={itemHash} className="feature__label">
               {item.name} ({USCurrencyFormat.format(item.cost)})
