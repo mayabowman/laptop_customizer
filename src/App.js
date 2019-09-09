@@ -11,6 +11,11 @@ import Cart from './Cart'
 // easily convert numbers into US dollar values
 
 class App extends Component {
+  constructor(props) {
+    super(props)
+    this.updateFeature = this.updateFeature.bind(this);
+  }
+  
   state = {
     selected: {
       Processor: {
@@ -51,7 +56,7 @@ class App extends Component {
           <Options 
             features={this.props.features} 
             selected={this.state.selected}
-            onChange={this.updateFeature.bind(this)}  
+            onChange={this.updateFeature}  
           />
         </form>
         <h2>Your cart</h2>
