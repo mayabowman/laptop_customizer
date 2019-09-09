@@ -15,7 +15,7 @@ class App extends Component {
     super(props)
     this.updateFeature = this.updateFeature.bind(this);
   }
-  
+
   state = {
     selected: {
       Processor: {
@@ -56,7 +56,7 @@ class App extends Component {
           <Options 
             features={this.props.features} 
             selected={this.state.selected}
-            onChange={this.updateFeature}  
+            updateFeature={this.updateFeature}  
           />
         </form>
         <h2>Your cart</h2>

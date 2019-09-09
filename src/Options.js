@@ -8,7 +8,7 @@ class Options extends Component {
         <ChooseFeature 
           features={this.props.features} 
           selected={this.props.selected} 
-          onChange={this.props.updateFeature}   
+          updateFeature={this.props.updateFeature}   
         />
       </div>
     )

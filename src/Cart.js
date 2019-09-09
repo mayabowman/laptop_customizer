@@ -6,8 +6,8 @@ class Cart extends Component {
   render() {
     return (
       <div>
-        <Summary features={this.props.features}selected={this.props.selected} />
-        <Totaler features={this.props.features}selected={this.props.selected} />
+        <Summary features={this.props.features} selected={this.props.selected} />
+        <Totaler features={this.props.features} selected={this.props.selected} />
       </div>
     )
   }
