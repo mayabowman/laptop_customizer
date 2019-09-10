@@ -17,7 +17,6 @@ class FieldOptions extends Component {
   // };
   
   render() {
-    console.log(this.props.features)
     // debugger;
     return (
       this.props.features[this.props.feature].map(item => {
@@ -30,7 +29,7 @@ class FieldOptions extends Component {
               className="feature__option"
               name={slugify(item.name)}
               checked={item.name === this.props.selected[this.props.feature].name}
-              onChange={e => this.props.updateFeature(this.props.selected, item)}
+              onChange={e => this.props.updateFeature(this.props.feature, item)}
             />
             <label htmlFor={itemHash} className="feature__label">
               {item.name} ({USCurrencyFormat.format(item.cost)})

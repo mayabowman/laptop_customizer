@@ -10,7 +10,6 @@ class Summary extends Component {
     
     return (
       Object.keys(this.props.selected).map((feature, idx) => {
-        console.log(feature);
         const featureHash = feature + '-' + idx;
         const selectedOption = this.props.selected[feature];
   
