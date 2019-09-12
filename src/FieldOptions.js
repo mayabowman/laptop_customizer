@@ -7,17 +7,8 @@ const USCurrencyFormat = new Intl.NumberFormat('en-US', {
 });
 
 class FieldOptions extends Component {
-
-  // updateFeature = (feature, newValue) => {
-  //   const selected = Object.assign({}, this.props.selected);
-  //   selected[feature] = newValue;
-  //   this.setState({
-  //     selected
-  //   });
-  // };
   
   render() {
-    // debugger;
     return (
       this.props.features[this.props.feature].map(item => {
         const itemHash = slugify(JSON.stringify(item));

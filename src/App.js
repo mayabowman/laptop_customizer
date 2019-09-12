@@ -1,14 +1,7 @@
 import React, { Component } from 'react';
-
-// Normalizes string as a slug - a string that is safe to use
-// in both URLs and html attributes
-
 import './App.css';
 import Options from './Options';
 import Cart from './Cart'
-
-// This object will allow us to
-// easily convert numbers into US dollar values
 
 class App extends Component {
   constructor(props) {
@@ -40,9 +33,6 @@ class App extends Component {
   updateFeature = (feature, newValue) => {
     const selected = Object.assign({}, this.state.selected);
     selected[feature] = newValue;
-    console.log(feature)
-    console.log(selected)
-    console.log(newValue)
     this.setState({
       selected      
     });
